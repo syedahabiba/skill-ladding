@@ -1,152 +1,381 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:ital,wght@0,200;0,500;0,600;1,200;1,600&display=swap');
-header section{
-    padding-left: 70px;
-}
-/*------------------header----------*/
-
-.container{
-    width: 100%;
-    height: 100%;
-    padding: 10px 10px 10px 10px;
-}
-
-.container button{
-    border: 1px solid white;
-    border-radius: 25px;
-    background-color: rgb(243, 60, 173);
-    color: white;
-    padding: 10px 10px;
-    font-size: 2rem;
-}
-.nav h1{
-    font-family: 'poppins',sans-serif;
-    font-size: 2.7rem;
-}
-.nav p{
-    font-family: 'poppins',sans-serif;
-    font-size: 1.7rem;
-    opacity: 0.5;
-    line-break: normal;
-}
-.logo button{
-    margin-left: 80%;
-}
-.nav{
-
-}
-/*-------------------section1---------------------*/
-.box{
-    border: 2px solid rgb(17, 9, 9);
-    border-radius: 25px;
-    padding: 10px;
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    box-shadow: 5px 10px #888888;
-    margin: 35px;
-    
 }
-.headingbox{
-    font-family: 'poppins',sans-serif;
-    font-size: 2rem;
+
+/* prevent horizontal overflow on mobile design*/
+
+html,
+body {
+    overflow-x: hidden;
 }
-.head{
-    font-family: 'poppins',sans-serif;
-    font-size: 1.7rem;
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
-.box p{
-    font-size: 1rem;
-    opacity: 0.5;
-}
-.first{
-    background: linear-gradient(to right, #ee0979, #ff6a00);
-    /*width: 20%;
-    height: 35%;*/
-    padding: 10px;
-}
-.box a{
-    color: hotpink;
-    font-size: 1.4rem;
+
+/* common css rule */
+
+a {
     text-decoration: none;
-    text-align: center;
+    cursor: pointer;
 }
-.grid{
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
+
+li {
+    list-style: none;
 }
-/*--------------footer-----------*/
-footer{
-    background-color: midnightblue;
-height: 100%;
-box-sizing: border-box;
-border: 2px solid white;
-border-radius: 25px;
-padding: 0px 0 100px 0;
+
+/* end of common css rule */
+
+/* set the variable */
+:root {
+    --btn-header-bg: #13183F;
+    --btn-hero-bg: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    --btn-footer-bg: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+
+
+    --btn-bg: #13183F;
+
+
+    --bg-color--courses: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
 }
-.footerlogo{
-    padding-top: 30px;
+
+/* Mobile First */
+
+.container {
+    width: 91%;
+    margin: 0 auto;
 }
-.btn{
-    margin-left: 90%;
-    margin-top: none;
+
+.btn {
+    width: 140px;
+    height: 48px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: white;
+    border-radius: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
-button{
-    border: 1px solid white;
-    border-radius: 25px;
-    background-color: rgb(243, 60, 173);
-    color: white;
-    padding: 10px 10px;
-    font-size: 2rem;
-   
+
+.logo img {
+    width: 89px;
 }
-button:hover{
-    cursor: pointer;
-    background-color: white;
-    color: rgb(243, 60, 173);
+
+
+/* header */
+
+
+.btn-header {
+    background: var(--btn-header-bg);
+
 }
-/*-----------------mobile-------------*/
-@media screen and (max-width: 800px) {
-.nav h1{
-    font-size: 1rem;
+
+.btn-header:hover {
+    background: #666CA3;
 }
-.nav p{
-    font-size: 0.6rem;
+
+.header nav {
+    height: 48px;
+    margin-top: 16px;
 }
-.container button{
-    font-size: 0.7rem;
-}
-.head{
-   font-size: 0.7rem; 
-}
-.headingbox{
-    font-size: 0.8rem;
-}
-.box p{
-    font-size: 0.5rem;
-}
-.box a{
-    font-size: 0.6rem;
-}
-.box{
-    line-height: 0.8;
-}
-.img{
-    width: 25%;
-}
-.btn{
-  /*  margin-left: 10px;
-    padding: auto;*/
-}
-.btn button{
-    font-size: 0.5rem;
-}
-footer{
+
+.header {
     position: relative;
-    width: 100%;
-    left: 0px;
-    bottom: 0px;
+    z-index: 1;
+    height: 100px;
 }
-.footerlogo{
-    height: 10px;
-    width: 10px;
+
+/* end of header */
+
+/* hello */
+
+.hello-text {
+    max-width: 400px;
 }
+
+
+.hello-text h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
+    color: #13183F
+}
+
+.hello-text p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #83869A
+}
+
+.hello-text h1,
+p {
+    margin-bottom: 24px;
+}
+
+.btn-hello {
+    background: var(--btn-hero-bg);
+    margin-bottom: 45px;
+}
+
+.btn-hello:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+.hello-img {
+    background-image: url(./assets/image-hero-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100%;
+    margin-bottom: 62px;
+}
+
+/* end of hero */
+
+/* cources */
+.cat {
+    background: var(--bg-color--courses);
+    padding-bottom: 80px;
+}
+
+.cources {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cource-feature {
+    width: 343px;
+    height: 112px;
+    border-radius: 10px;
+    padding: 24px 28px;
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.cource-feature p {
+    color: white;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 800;
+}
+
+.cource {
+    width: 343px;
+    height: 259px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    position: relative;
+    margin-top: 32px;
+}
+
+.cource * {
+    margin-top: 30px;
+}
+
+.cource h1 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+    color: #13183F;
+}
+
+.cource p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #83869A;
+}
+
+.cource a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #F74780;
+}
+
+.cource a:hover {
+    color: #FFA7C3;
+}
+
+.cource img {
+    position: absolute;
+    top: -50px;
+
+}
+
+/* end of courses */
+
+/* footer */
+.footer {
+    background: var(--btn-bg);
+    height: 120px;
+}
+
+.footer nav {
+    padding-top: 36px;
+}
+
+.btn-footer {
+    background: var(--btn-footer-bg);
+}
+
+.btn-footer:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+/* end of footer */
+
+
+/* tablet media queries */
+/*-----------------mobile-------------*/
+@media (min-width: 768px) {
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .hello {
+        position: relative;
+    }
+
+    .hello-text {
+        padding: 100px;
+        padding-bottom: 210px;
+
+    }
+
+    .hello-img {
+        z-index: -1;
+        background-image: url(./assets/image-hero-tablet.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 640px;
+        height: 640px;
+        top: -190px;
+        right: -290px;
+        padding-top: 0px;
+
+    }
+
+    .cource-feature {
+        width: 48%;
+        height: 259px;
+        padding: 56px 32px;
+        margin-top: 57px;
+
+    }
+
+    .cource {
+        width: 48%;
+        height: 283px;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 78%;
+        margin: 0 auto;
+
+    }
+
+    .logo img {
+        width: 114px;
+
+    }
+
+    .hello-text {
+        max-width: 460px;
+
+    }
+
+    .hello-img {
+        background-image: url(./assets/image-hero-desktop.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 991px;
+        height: 937px;
+        top: -320px;
+        right: -510px;
+        padding-top: 0px;
+
+    }
+
+    .cources {
+        gap: 20px;
+
+    }
+
+    .cource-feature {
+        width: 31%;
+
+    }
+
+    .cource {
+        height: 280px;
+        width: 31%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .btn {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .hello-text h1 {
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 70.5px;
+        color: #13183F;
+
+    }
+
+    .cources {
+        gap: 30px;
+
+    }
+
+    .cource-feature p {
+        font-size: 32px;
+        line-height: 40px;
+
+    }
+
+    .cource h1 {
+        font-size: 24px;
+        line-height: 30px;
+
+    }
 }
